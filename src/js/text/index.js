@@ -319,7 +319,7 @@ Text.prototype = {
             // firefox 时用 txtHtml === '<br>' 判断，其他用 !txtHtml 判断
             if (!txtHtml || txtHtml === '<br>') {
                 // 内容空了
-                $p = $('<p><br/></p>')
+                $p = $('<p style="margin: 0px;"><br/></p>')
                 $textElem.html('') // 一定要先清空，否则在 firefox 下有问题
                 $textElem.append($p)
                 editor.selection.createRangeByElem($p, false, true)
