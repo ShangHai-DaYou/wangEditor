@@ -215,7 +215,7 @@ Editor.prototype = {
         const $children = $textElem.children()
         if (!$children.length) {
             // 如果编辑器区域无内容，添加一个空行，重新设置选区
-            $textElem.append($('<p><br></p>'))
+            $textElem.append($('<p style="margin: 0px;"><br></p>'))
             this.initSelection()
             return
         }
